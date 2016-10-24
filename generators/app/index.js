@@ -50,7 +50,7 @@ function composeViewContents(props) {
   }
   if (props.viewModelName) {
     viewRequires = viewRequires.concat('\n         \'' + props.namespace + '.viewmodel.' + props.viewModelName + '\',');
-    viewBody = viewBody.concat('\n    viewModel: \'' + props.viewModelName.decapitalize() + '\',');
+    viewBody = viewBody.concat('\n    viewModel: {\n        type: \'' + props.viewModelName.decapitalize() + '\'\n    },');
     if (props.storeName) {
       viewBody = viewBody.concat('\n    ' + 'bind: {\n        store: \'' + props.storeName.decapitalize() + '\'\n    },');
     }
