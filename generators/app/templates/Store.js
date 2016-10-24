@@ -5,7 +5,7 @@
  */
 Ext.define('<%= namespace %>.store.<%= storeName %>', {
     extend: 'Ext.data.Store',
-    storeId: '<%= storeName.decapitalize() %>',
+    alias: 'store.<%= storeName.decapitalize() %>',
 
     <% if (generatedItems.indexOf('Model') >= 0) { %>model: '<%= namespace %>.model.<%=modelName%>', <% } else { %>fields: [ ],<% } %>
 
