@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Controller bound with the view <%= namespace %>.view.<%= viewName %>.
+ * Controller <% if (generatedItems.indexOf('View') >= 0) { %> bound with the view <%= namespace %>.view.<%= viewName %>. <% } %>
  */
 Ext.define('<%= namespace %>.controller.<%= controllerName %>', {
     extend: 'Ext.app.ViewController',
