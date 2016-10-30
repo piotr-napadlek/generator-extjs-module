@@ -16,11 +16,19 @@ Ext.define('<%= namespace %>.controller.<%= controllerName %>', {
         }
     },
 
-    /**
-     * Defines the initial logic upon controller creation
-     */
-    constructor: function () {
-        console.debug(this.alias + ' created.');
+   /**
+    * Called when an underlying view.initComponent() is done
+    * @param {Ext.Component} view view which has been created
+    */
+    init: function (view) {
+        console.log(view);
+    },
+
+   /**
+    * Called when view's view model instance has been attached.
+    */
+    initViewModel: function (viewModel) {
+        console.log(viewModel);
     }
 });
 
