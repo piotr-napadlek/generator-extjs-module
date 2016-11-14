@@ -136,7 +136,7 @@ module.exports = yeoman.Base.extend({
       name: 'viewXType',
       message: 'Would you like to provide an xtype for the View?',
       default: function(response) {
-        return response.viewName.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+        return response.viewName.decapitalize();
       }
     }, {
       when: function (response) {

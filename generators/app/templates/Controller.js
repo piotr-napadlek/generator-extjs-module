@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Controller <% if (generatedItems.indexOf('View') >= 0) { %> bound with the view <%= namespace %>.view.<%= viewName %>. <% } %>
  */
@@ -17,10 +15,18 @@ Ext.define('<%= namespace %>.controller.<%= controllerName %>', {
     },
 
     /**
-     * Defines the initial logic upon controller creation
+     * Launched after view is initialized (after view's initComponent())
      */
-    constructor: function () {
-        console.debug(this.alias + ' created.');
+    init: function () {
+
+    },
+
+    /**
+     * Launched after view model and all it's bindings are ready.
+     */
+    initViewModel: function () {
+
     }
+
 });
 

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * View Model for the bindings with <% if (generatedItems.indexOf('View') >= 0) { %><%= namespace %>.view.<%= viewName %>.<% } %>
  */
@@ -9,7 +7,11 @@ Ext.define('<%= namespace %>.viewmodel.<%= viewModelName %>', {
 
     requires: [
         '<%=namespace%>.store.<%=storeName%>'
-    ]
+    ],
+
+    data: {
+
+    },
 
     stores: {
         <%=storeName.decapitalize()%>: {

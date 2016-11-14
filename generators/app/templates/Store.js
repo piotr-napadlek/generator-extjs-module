@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Items container for the view <%= namespace %>.view.<%= viewName %>.
  */
