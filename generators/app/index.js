@@ -44,7 +44,7 @@ function composeViewContents(props) {
     viewRequires = viewRequires.concat('\n         \'' + props.namespace + '.controller.' + props.controllerName + '\',');
     viewBody = viewBody.concat('\n    controller: \'' + props.controllerName.decapitalize() + '\',');
   }
-  if (props.storeName && !props.viewModelName) {
+  if (props.storeName && !props.viewModelName && (props.viewExtend === 'Ext.grid.Panel' || props.viewExtend === 'Ext.tree.Panel')) {
     viewRequires = viewRequires.concat('\n         \'' + props.namespace + '.store.' + props.storeName + '\',');
     viewBody = viewBody.concat('\n    store {\n        type: { : \'' + props.storeName.decapitalize() + '\' }\n    },');
   }

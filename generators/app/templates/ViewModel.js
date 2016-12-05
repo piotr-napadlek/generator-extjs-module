@@ -20,4 +20,3 @@ Ext.define('<%= namespace %>.viewmodel.<%= viewModelName %>', {
     } <% } %>
 
 });
-
